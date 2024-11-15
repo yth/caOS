@@ -130,10 +130,11 @@ pub fn print_something() {
     write!(writer, "The numbers are {} and {}", 42, 1.0 / 3.0).unwrap();
 }
 
+// continue at https://os.phil-opp.com/vga-text-mode/#a-global-interface
+/*
 pub static WRITER: Writer = Writer {
     column_position: 0,
     color_code: ColorCode::new(Color::Yellow, Color::Black),
     buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
 };
-
-// continue at https://os.phil-opp.com/vga-text-mode/#a-global-interface
+*/
