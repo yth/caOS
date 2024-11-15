@@ -4,5 +4,13 @@ qemu: bin
 clean:
 	cargo clean
 
-bin:
+bin: fmt
 	cargo bootimage
+
+fmt:
+	cargo fmt
+
+prereqs:
+	rustup toolchain install nightly
+	rustup default nightly
+	rustup component add llvm-tools-preview
